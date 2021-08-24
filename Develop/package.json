@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.1.2"
+  },
+  "name": "develop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeMcHenry311/Readme-Gen-Shizi.git"
+  },
+  "author": "luke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukeMcHenry311/Readme-Gen-Shizi/issues"
+  },
+  "homepage": "https://github.com/LukeMcHenry311/Readme-Gen-Shizi#readme",
+  "description": ""
+}
