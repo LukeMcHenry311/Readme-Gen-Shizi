@@ -72,9 +72,7 @@ console.log(`answer questions`);
 //     }
 // ])};
 
-function questions() {
-    inquirer
-    .prompt([
+    const questions = [
         {
             type: 'input',
             name: 'name',
@@ -134,27 +132,27 @@ function questions() {
             message: 'what helped you create this project (if any)',
             choices: ['collaborators', 'lessons', 'tutorials', 'none']
         }
-    ])
-};
+    ]
 
+// reference from https://www.geeksforgeeks.org/node-js-fs-writefile-method/
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data)
 }
 // seen as a reference at https://stackoverflow.com/questions/62597209/trying-to-generate-a-readme-using-nodejs
 // TODO: Create a function to initialize app
+// function init() {
+//     questions()
+// }
 function init() {
-    inquirer.prompt(questions())
+inquirer.prompt(questions)
+.then((inquirerResponse, data) => {   
+    console.log("Making ReadMe");
+    fs.writeToFile("vex.md", markdown, data);
+})
+.catch((err) => {
+    console.log(err);
+})
 }
-
-// inquirer.prompt(questions)
-// .then((inquirerResponse, data) => {   
-//     console.log("Making ReadMe");
-//     fs.writeToFile("vex.md", markdown, data);
-// })
-// .catch((err) => {
-//     console.log(err);
-// })
-
 // Function call to initialize app
 init();
