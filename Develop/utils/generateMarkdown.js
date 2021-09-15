@@ -20,6 +20,7 @@ function generateMarkdown(response) {
   * [Description](#description)
   * [Technologies Applied](#technologies)
   * [Github-link](#github-link)
+  * [Deployed-Application](#deployed-application)
   * [Installation](#installation)
   * [Instructions](#instructions)
   * [Licenses](#licenses)
@@ -35,6 +36,8 @@ function generateMarkdown(response) {
   ${response.technologies}
   ## Github-link
   ${response.glink}
+  ## Deployed-Application
+  ${response.deployedurl}
   ## Installation
   ${response.installation}
   ## Instructions

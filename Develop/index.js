@@ -39,6 +39,11 @@ const questions = [
     {
         type: 'input',
         name: 'glink',
+        message: 'URL of the github repository'
+    },
+    {
+        type: 'input',
+        name: 'deployedurl',
         message: 'URL of the deployed application'
     },
     {
